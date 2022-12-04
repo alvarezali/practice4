@@ -33,16 +33,26 @@ const products = [{
 },
 {
     _id: 4,
-    image: 'images/travel_mexicopng',
-    name: 'Travel London',
+    image: 'images/travel_mexico.png',
+    name: 'Travel Mexico',
     category: 'sticker',
     brand: 'uTravelSticker',
     price: 1.55,
     numReviews: 12,
     countInStock: 19
+},
+{
+    _id: 4,
+    image: 'images/bull_power.png',
+    name: 'Bull Power',
+    category: 'sticker',
+    brand: 'Animalistic',
+    price: 0.78,
+    numReviews: 3,
+    countInStock: 10
 }
+
 ];
 
-console.log(products);
 
 export { products };
