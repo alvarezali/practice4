@@ -1,4 +1,4 @@
-import { HomeScreen } from "./screens/HomeScreen.js";
+import HomeScreen from "./screens/HomeScreen.js";
 
 const router = () => {
     const main = document.getElementById('main-container');

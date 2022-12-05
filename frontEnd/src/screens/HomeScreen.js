@@ -1,4 +1,4 @@
-import { products } from "../data.js"
+import products from "../data.js"
 
 const HomeScreen = {
     render: () => {
@@ -18,6 +18,4 @@ const HomeScreen = {
     }
 }
 
-console.log(HomeScreen.render());
-
-export { HomeScreen };
+export default HomeScreen;

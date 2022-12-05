@@ -42,7 +42,7 @@ const products = [{
     countInStock: 19
 },
 {
-    _id: 4,
+    _id: 5,
     image: 'images/bull_power.png',
     name: 'Bull Power',
     category: 'sticker',
@@ -50,9 +50,19 @@ const products = [{
     price: 0.78,
     numReviews: 3,
     countInStock: 10
+},
+{
+    _id: 6,
+    image: 'images/bird_fly.png',
+    name: 'Bird Fly',
+    category: 'sticker',
+    brand: 'Animalistic',
+    price: 0.80,
+    numReviews: 7,
+    countInStock: 13
 }
 
 ];
 
 
-export { products };
+export default products;
