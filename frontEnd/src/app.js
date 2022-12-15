@@ -1,24 +1,25 @@
-import Error404Screen from "./screens/Error404Screen.js";
-import HomeScreen from "./screens/HomeScreen.js";
-import ProductScreen from "./screens/ProductScreen.js";
-import parseUrlRequest from "./utils.js";
+import {HomeScreen} from "./screens/HomeScreen.js";
+import {ProductScreen} from "./screens/ProductScreen.js";
+import {ErrorScreen} from "./screens/Error404Screen.js";
+import {parseUrlRequest} from "./utils.js";
 
 const routes = {
-    "/": HomeScreen,
-    "/product/:id": ProductScreen,
+    '/': HomeScreen,
+    '/product/id': ProductScreen
+
 }
 
-const router = () => {
+const router = ()=>{
 
-    const request = parseUrlRequest();
-    const parseUrl = (request.resource ? `/${request.resource}` : '/') +
-                     (request.id ? '/:id' : '') +
-                     (request.verb ? `/${request.verb}` : '');
+    const parseUrl = parseUrlRequest();
 
-    const screen = routes[parseUrl] ? routes[parseUrl] : Error404Screen;
-
+    screen = (parseUrl.path ? `/${parseUrl.path}`: '/') +
+             (parseUrl.id ? `/id` : '') +
+             (parseUrl.action ? `/${parseUrl.action}` : '');
+             
     const main = document.getElementById('main-container');
-    main.innerHTML = screen.render();
+
+    main.innerHTML = routes[screen] ? routes[screen].render(): ErrorScreen.render();
 }
 
 window.addEventListener('load', router);

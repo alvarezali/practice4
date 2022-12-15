@@ -1,13 +1,15 @@
-const parseUrlRequest = () => {
-    const url = document.location.hash.toLowerCase();
-    
+const parseUrlRequest = ()=> {
+
+    const url = window.location.hash.toLocaleLowerCase();
+
     const request = url.split('/');
 
     return {
-        resource: request[1],
+        path: request[1],
         id: request[2],
         action: request[3]
-    }
+    };
+
 }
 
-export default parseUrlRequest;
+export {parseUrlRequest};
