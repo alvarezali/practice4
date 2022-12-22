@@ -1,6 +1,7 @@
-export default {
-    products: [
-    {
+
+module.exports = {
+
+    products: [{
         _id: 1,
         image: 'images/exploring_camping.png',
         name: 'Exploring camping',
@@ -63,5 +64,6 @@ export default {
         numReviews: 7,
         countInStock: 13
     }
+
     ]
 }
