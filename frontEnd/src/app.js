@@ -1,6 +1,6 @@
 import {HomeScreen} from "./screens/HomeScreen.js";
 import {ProductScreen} from "./screens/ProductScreen.js";
-import {ErrorScreen} from "./screens/Error404Screen.js";
+import {Error404Screen} from "./screens/Error404Screen.js";
 import {parseUrlRequest} from "./utils.js";
 
 const routes = {
@@ -11,16 +11,21 @@ const routes = {
 
 const router = ()=>{
 
-    const parseUrl = parseUrlRequest();
+    const request = parseUrlRequest();
 
-    screen = (parseUrl.path ? `/${parseUrl.path}`: '/') +
-             (parseUrl.id ? `/id` : '') +
-             (parseUrl.action ? `/${parseUrl.action}` : '');
+    const parseUrl = (request.path ? `/${request.path}`: '/') +
+             (request.id ? `/id` : '') +
+             (request.action ? `/${request.action}` : '');
              
+            
     const main = document.getElementById('main-container');
 
-    main.innerHTML = routes[screen] ? routes[screen].render(): ErrorScreen.render();
+    screen = routes[parseUrl] ? routes[parseUrl]: Error404Screen;
+
+    main.innerHTML = screen.render();
 }
 
 window.addEventListener('load', router);
 window.addEventListener('hashchange', router);
+
+//This is just a change to test github

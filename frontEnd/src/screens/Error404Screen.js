@@ -1,10 +1,10 @@
-const ErrorScreen = {
+const Error404Screen = {
     render: ()=> {
         return `
         
-        <div>Not found</div>
+        <div>Not found - Error404</div>
         `
     }
 }
 
-export {ErrorScreen};
+export {Error404Screen};
