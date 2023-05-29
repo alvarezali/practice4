@@ -9,20 +9,19 @@ const routes = {
 
 }
 
-const router = ()=>{
+const router = async ()=>{
 
     const request = parseUrlRequest();
 
     const parseUrl = (request.path ? `/${request.path}`: '/') +
              (request.id ? `/id` : '') +
              (request.action ? `/${request.action}` : '');
-             
-            
+                 
     const main = document.getElementById('main-container');
 
     screen = routes[parseUrl] ? routes[parseUrl]: Error404Screen;
 
-    main.innerHTML = screen.render();
+    main.innerHTML = await screen.render();
 }
 
 window.addEventListener('load', router);
