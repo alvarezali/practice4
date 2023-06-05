@@ -41,6 +41,7 @@ export default {
         category: 'sticker',
         brand: 'uTravelSticker',
         price: 1.55,
+        rating: 3.2,
         numReviews: 12,
         countInStock: 19
     },
@@ -51,6 +52,7 @@ export default {
         category: 'sticker',
         brand: 'Animalistic',
         price: 0.78,
+        rating: 4.8,
         numReviews: 3,
         countInStock: 10
     },
@@ -61,6 +63,7 @@ export default {
         category: 'sticker',
         brand: 'Animalistic',
         price: 0.80,
+        rating: 3.9,
         numReviews: 7,
         countInStock: 13
     }
