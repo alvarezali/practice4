@@ -8,7 +8,7 @@ export default {
         category: 'sticker',
         brand: 'HashSticker',
         price: 1.25,
-        rating: 4.5,
+        rating: 2.5,
         numReviews: 10,
         countInStock: 45
     },
