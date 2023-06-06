@@ -120,11 +120,6 @@ header a:hover {
 
 
 
-
-
-
-
-
 /*================footer================*/
 
 footer {
@@ -136,3 +131,14 @@ footer {
     height: 100%;
 }
 
+/*================rating================*/
+
+.fa {
+    color: #ffc000;
+    font-size: 1.8rem;
+}
+
+.rating span {
+    color: var(--brand_font);
+    font-size: 1.4rem;
+}

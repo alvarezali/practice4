@@ -9,7 +9,6 @@ const parseUrlRequest = ()=> {
         id: request[2],
         action: request[3]
     };
-
 }
 
 export {parseUrlRequest};

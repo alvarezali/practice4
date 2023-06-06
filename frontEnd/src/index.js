@@ -26,5 +26,3 @@ const router = async ()=>{
 
 window.addEventListener('load', router);
 window.addEventListener('hashchange', router);
-
-//This is just a change to test github
